@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mmall.batis.repository.UserInfoRepository">
+
+    <insert id="add" parameterType="com.mmall.batis.pojo.UserInfo">
+        insert into mmall_userinfo(id,uname,email,address,mobile)VALUES ("1",#{userName},#{email},#{address},#{mobile});
+    </insert>
+ <insert id="deleteById" parameterType="java.lang.String">
+
+        delete  from mmall_userinfo where id=#{id};
+    </insert>
+
+
+</mapper>
